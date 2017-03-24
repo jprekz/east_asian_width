@@ -1,0 +1,10 @@
+{
+	"name": "east-asian-width",
+	"authors": [
+		"jprekz"
+	],
+	"description": "Unicode library for getting East Asian Width property",
+	"copyright": "Copyright © 2017, jprekz",
+	"license": "BSL-1.0",
+	"targetName": "Library"
+}
