@@ -30,6 +30,24 @@ if (isSomeString!T) {
     return width;
 }
 
+/// example
+@safe pure @nogc unittest {
+    assert(displayWidth("あいうえお") == 10);
+
+    // '☆' is Ambiguous characters
+    assert(displayWidth('☆') == 1);
+    assert(displayWidth('☆', AmbiguousCharWidth.wide) == 2);
+    assert(displayWidth("☆D言語くん☆") == 11);
+    assert(displayWidth("☆D言語くん☆", AmbiguousCharWidth.wide) == 13);
+
+    assert(eastAsianWidth('Ａ') == EastAsianWidthProperty.F); // Fullwidth
+    assert(eastAsianWidth('ｱ') == EastAsianWidthProperty.H);  // Halfwidth
+    assert(eastAsianWidth('ア') == EastAsianWidthProperty.W); // Wide
+    assert(eastAsianWidth('A') == EastAsianWidthProperty.Na); // Narrow
+    assert(eastAsianWidth('☆') == EastAsianWidthProperty.A); // Ambiguous
+    assert(eastAsianWidth('À') == EastAsianWidthProperty.N);  // Neutral
+}
+
 @safe pure @nogc nothrow unittest {
     assert(eastAsianWidth('Ａ') == EastAsianWidthProperty.F);
     assert(eastAsianWidth('！') == EastAsianWidthProperty.F);
