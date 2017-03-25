@@ -1,9 +1,11 @@
 module eastasianwidth.eastasianwidth;
 
+/// East_Asian_Width property
 enum EastAsianWidthProperty {
     A, F, H, N, Na, W
 }
 
+/// returns East_Asian_Width property of a character
 EastAsianWidthProperty eastAsianWidth(dchar ch) @safe pure @nogc nothrow {
     const uint codePoint =  ch;
     if ((codePoint == 12288) ||

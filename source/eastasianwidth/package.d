@@ -4,11 +4,13 @@ public import eastasianwidth.eastasianwidth;
 
 import std.traits;
 
+///
 enum AmbiguousCharWidth : bool {
     narrow,
     wide
 }
 
+/// returns monospace display width of a character
 size_t displayWidth(T)(T ch, AmbiguousCharWidth acw = AmbiguousCharWidth.narrow)
 if (isSomeChar!T) {
     auto prop = eastAsianWidth(ch);
@@ -21,6 +23,7 @@ if (isSomeChar!T) {
     }
 }
 
+/// returns monospace display width of a string
 size_t displayWidth(T)(T str, AmbiguousCharWidth acw = AmbiguousCharWidth.narrow)
 if (isSomeString!T) {
     size_t width;
@@ -30,7 +33,7 @@ if (isSomeString!T) {
     return width;
 }
 
-/// example
+///
 @safe pure @nogc unittest {
     assert(displayWidth("あいうえお") == 10);
 
