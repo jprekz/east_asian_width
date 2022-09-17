@@ -7,7 +7,7 @@ enum EastAsianWidthProperty {
 
 /// returns East_Asian_Width property of a character
 EastAsianWidthProperty eastAsianWidth(dchar ch) @safe pure @nogc nothrow {
-    const uint codePoint =  ch;
+    const uint codePoint = ch;
     if ((codePoint == 12288) ||
         (65281 <= codePoint && codePoint <= 65376) ||
         (65504 <= codePoint && codePoint <= 65510)) return EastAsianWidthProperty.F;
@@ -60,14 +60,12 @@ EastAsianWidthProperty eastAsianWidth(dchar ch) @safe pure @nogc nothrow {
         (12289 <= codePoint && codePoint <= 12350) ||
         (12353 <= codePoint && codePoint <= 12438) ||
         (12441 <= codePoint && codePoint <= 12543) ||
-        (12549 <= codePoint && codePoint <= 12589) ||
+        (12549 <= codePoint && codePoint <= 12591) ||
         (12593 <= codePoint && codePoint <= 12686) ||
-        (12688 <= codePoint && codePoint <= 12730) ||
-        (12736 <= codePoint && codePoint <= 12771) ||
+        (12688 <= codePoint && codePoint <= 12771) ||
         (12784 <= codePoint && codePoint <= 12830) ||
         (12832 <= codePoint && codePoint <= 12871) ||
-        (12880 <= codePoint && codePoint <= 13054) ||
-        (13056 <= codePoint && codePoint <= 19903) ||
+        (12880 <= codePoint && codePoint <= 19903) ||
         (19968 <= codePoint && codePoint <= 42124) ||
         (42128 <= codePoint && codePoint <= 42182) ||
         (43360 <= codePoint && codePoint <= 43388) ||
@@ -77,10 +75,20 @@ EastAsianWidthProperty eastAsianWidth(dchar ch) @safe pure @nogc nothrow {
         (65072 <= codePoint && codePoint <= 65106) ||
         (65108 <= codePoint && codePoint <= 65126) ||
         (65128 <= codePoint && codePoint <= 65131) ||
-        (codePoint == 94176) ||
-        (94208 <= codePoint && codePoint <= 100332) ||
-        (100352 <= codePoint && codePoint <= 101106) ||
-        (110592 <= codePoint && codePoint <= 110593) ||
+        (94176 <= codePoint && codePoint <= 94180) ||
+        (94192 <= codePoint && codePoint <= 94193) ||
+        (94208 <= codePoint && codePoint <= 100343) ||
+        (100352 <= codePoint && codePoint <= 101589) ||
+        (101632 <= codePoint && codePoint <= 101640) ||
+        (110576 <= codePoint && codePoint <= 110579) ||
+        (110581 <= codePoint && codePoint <= 110587) ||
+        (110589 <= codePoint && codePoint <= 110590) ||
+        (110592 <= codePoint && codePoint <= 110882) ||
+        (codePoint == 110898) ||
+        (110928 <= codePoint && codePoint <= 110930) ||
+        (codePoint == 110933) ||
+        (110948 <= codePoint && codePoint <= 110951) ||
+        (110960 <= codePoint && codePoint <= 111355) ||
         (codePoint == 126980) ||
         (codePoint == 127183) ||
         (codePoint == 127374) ||
@@ -89,6 +97,7 @@ EastAsianWidthProperty eastAsianWidth(dchar ch) @safe pure @nogc nothrow {
         (127504 <= codePoint && codePoint <= 127547) ||
         (127552 <= codePoint && codePoint <= 127560) ||
         (127568 <= codePoint && codePoint <= 127569) ||
+        (127584 <= codePoint && codePoint <= 127589) ||
         (127744 <= codePoint && codePoint <= 127776) ||
         (127789 <= codePoint && codePoint <= 127797) ||
         (127799 <= codePoint && codePoint <= 127868) ||
@@ -110,16 +119,22 @@ EastAsianWidthProperty eastAsianWidth(dchar ch) @safe pure @nogc nothrow {
         (128640 <= codePoint && codePoint <= 128709) ||
         (codePoint == 128716) ||
         (128720 <= codePoint && codePoint <= 128722) ||
+        (128725 <= codePoint && codePoint <= 128727) ||
+        (128732 <= codePoint && codePoint <= 128735) ||
         (128747 <= codePoint && codePoint <= 128748) ||
-        (128756 <= codePoint && codePoint <= 128758) ||
-        (129296 <= codePoint && codePoint <= 129310) ||
-        (129312 <= codePoint && codePoint <= 129319) ||
-        (codePoint == 129328) ||
-        (129331 <= codePoint && codePoint <= 129342) ||
-        (129344 <= codePoint && codePoint <= 129355) ||
-        (129360 <= codePoint && codePoint <= 129374) ||
-        (129408 <= codePoint && codePoint <= 129425) ||
-        (codePoint == 129472) ||
+        (128756 <= codePoint && codePoint <= 128764) ||
+        (128992 <= codePoint && codePoint <= 129003) ||
+        (codePoint == 129008) ||
+        (129292 <= codePoint && codePoint <= 129338) ||
+        (129340 <= codePoint && codePoint <= 129349) ||
+        (129351 <= codePoint && codePoint <= 129535) ||
+        (129648 <= codePoint && codePoint <= 129660) ||
+        (129664 <= codePoint && codePoint <= 129672) ||
+        (129680 <= codePoint && codePoint <= 129725) ||
+        (129727 <= codePoint && codePoint <= 129733) ||
+        (129742 <= codePoint && codePoint <= 129755) ||
+        (129760 <= codePoint && codePoint <= 129768) ||
+        (129776 <= codePoint && codePoint <= 129784) ||
         (131072 <= codePoint && codePoint <= 196605) ||
         (196608 <= codePoint && codePoint <= 262141)) return EastAsianWidthProperty.W;
     if ((32 <= codePoint && codePoint <= 126) ||
